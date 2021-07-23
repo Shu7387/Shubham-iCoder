@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>iCoder/Contact</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Raleway"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- 1.Navigation Bar style -->
+    <style>
+      body {
+        background: #eeeeee;
+        font-family: "Varela Round", sans-serif;
+      }
+      .form-inline {
+        display: inline-block;
+      }
+      .navbar-header.col {
+        padding: 0 !important;
+      }
+      .navbar {
+        background: #ff7f505e;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-bottom: 1px solid #d6d6d6;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+      }
+      .nav-link {
+        margin: 0 5px;
+      }
+      .nav-link img {
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        margin: -8px 0;
+        float: left;
+        margin-right: 10px;
+      }
+      .navbar .navbar-brand {
+        color: #555;
+        padding-left: 0;
+        font-size: 20px;
+        padding-right: 50px;
+        font-family: "Raleway", sans-serif;
+      }
+      .navbar .navbar-brand b {
+        font-weight: bold;
+        color: #eb5844;
+      }
+      .navbar .navbar-nav a:hover,
+      .navbar .navbar-nav a:focus {
+        color: #f08373 !important;
+      }
+      .navbar .navbar-nav a.active,
+      .navbar .navbar-nav a.active:hover {
+        color: #eb5844 !important;
+        background: transparent !important;
+      }
+      .search-box {
+        position: relative;
+      }
+      .search-box input.form-control {
+        padding-right: 35px;
+        border-radius: 0;
+        padding-left: 0;
+        border-width: 0 0 1px 0;
+        box-shadow: none;
+      }
+      .search-box input.form-control:focus {
+        border-color: #f08373;
+      }
+      .search-box .input-group-text {
+        min-width: 35px;
+        border: none;
+        background: transparent;
+        position: absolute;
+        right: 0;
+        z-index: 9;
+        padding: 7px 0 7px 7px;
+        height: 100%;
+      }
+      .search-box i {
+        color: #a0a5b1;
+        font-size: 19px;
+      }
+      .navbar .nav-item i {
+        font-size: 18px;
+      }
+      .navbar .dropdown-item i {
+        font-size: 16px;
+        min-width: 22px;
+      }
+      .navbar .nav-item.show > a {
+        background: none !important;
+      }
+      .navbar .dropdown-menu {
+        border-radius: 1px;
+        border-color: #e5e5e5;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+      .navbar .dropdown-menu a {
+        color: #777;
+        padding: 8px 20px;
+        line-height: normal;
+        font-size: 15px;
+      }
+      .navbar .navbar-form {
+        margin-right: 0;
+        margin-left: 0;
+        border: 0;
+      }
+      @media (min-width: 992px) {
+        .form-inline .input-group {
+          width: 250px;
+          margin-right: 30px;
+        }
+      }
+      @media (max-width: 991px) {
+        .form-inline {
+          display: block;
+          margin-bottom: 10px;
+          margin-top: 0;
+        }
+        .input-group {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1.Navigation Bar Html -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="aboutMe.html"
+        ><img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Blue_computer_icon.svg/2048px-Blue_computer_icon.svg.png"
+          height="40px"
+          width="52px"
+        /><b>i</b>Coder</a
+      >
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Collection of nav links, forms, and other content for toggling -->
+      <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+        <div class="navbar-nav">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown"
+              >Services</a
+            >
+            <div class="dropdown-menu">
+              <a
+                href="https://medium.com/@Vincentxia77/beginners-guide-how-to-learn-web-designing-at-home-796c01b8c0c2"
+                class="dropdown-item"
+                target="_blank"
+                >Web Design</a
+              >
+              <a href="https://www.w3schools.com/whatis/" target="_blank" class="dropdown-item"
+                >Web Development</a
+              >
+              <a
+                target="_blank"
+                href="https://www.interaction-design.org/literature/topics/graphic-design"
+                class="dropdown-item"
+                >Graphic Design</a
+              >
+              <a
+                target="_blank"
+                href="https://www.marketo.com/digital-marketing/"
+                class="dropdown-item"
+                >Digital Marketing</a
+              >
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" target="_blank" href="https://support.microsoft.com/"
+                  >Support</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  target="_blank"
+                  href="https://alistapart.com/about/contribute/"
+                  >Write for Us</a
+                >
+              </li>
+            </div>
+          </div>
+
+          <li class="nav-item active"><a href="contact.html" class="nav-link">Contact Us</a></li>
+          <a target="_blank" href="https://www.blogger.com/about/" class="nav-item nav-link active"
+            >Blog</a
+          >
+
+          <!-- Login and SignUp buttons -->
+          <button
+            type="button"
+            class="btn btn-success"
+            style="margin: 0px 15px"
+            data-bs-toggle="modal"
+            data-bs-target="#LoginModal"
+          >
+            Login
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-danger"
+            style="margin-left: -5px"
+            data-bs-toggle="modal"
+            data-bs-target="#SignUpModal"
+          >
+            SignUp
+          </button>
+
+          <!-- Login Modal -->
+          <div
+            class="modal fade"
+            id="LoginModal"
+            tabindex="-1"
+            aria-labelledby="LoginModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="LoginModalLabel">Log in To iCoder</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                      />
+                      <div id="emailHelp" class="form-text">
+                        We'll never share your email with anyone else.
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" />
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                      <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SignUp Modal -->
+          <div
+            class="modal fade"
+            id="SignUpModal"
+            tabindex="-1"
+            aria-labelledby="SignUpModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="SignUpModalLabel">Create a iCoder Account</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="exampleInputName" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="exampleInputName" />
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                      />
+                      <div id="emailHelp" class="form-text">
+                        We'll never share your email with anyone else.
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" />
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="exampleInputPassword2" class="form-label">
+                        Confirm Password</label
+                      >
+                      <input type="password" class="form-control" id="exampleInputPassword2" />
+                    </div>
+
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                      <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-nav ml-auto">
+          <form class="d-flex">
+            <input
+              id="myInput"
+              class="form-control me-2"
+              type="search"
+              placeholder="Search Here..."
+              aria-label="Search"
+            />
+
+            <button
+              class="btn btn-outline-dark"
+              type="submit"
+              style="background-color: rgb(230, 237, 243)"
+            >
+              Search
+            </button>
+          </form>
+          <a target="_blank" href="https://www.facebook.com/" class="nav-item nav-link"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a target="_blank" href="https://twitter.com/?lang=en" class="nav-item nav-link"
+            ><i class="fa fa-twitter"></i
+          ></a>
+          <a target="_blank" href="https://myaccount.google.com/profile" class="nav-item nav-link"
+            ><i class="fa fa-google-plus"></i
+          ></a>
+          <a target="_blank" href="https://in.pinterest.com/" class="nav-item nav-link"
+            ><i class="fa fa-pinterest-p"></i
+          ></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 2.Contact Us -->
+    <div>
+      <style>
+        input[type="text"],
+        select,
+        textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+
+        input[type="submit"] {
+          background-color: #04aa6d;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+          background-color: #45a049;
+        }
+
+        red .container {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+      </style>
+
+      <h3 style="text-align: center; margin-top: 75px">Contact Us</h3>
+      <div class="red container" style="box-sizing: border-box">
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..." />
+
+          <label for="lname">Email</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your Email..." />
+
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+          <br /><br />
+
+          <label
+            >Are you a member? &nbsp; &nbsp; <input type="radio" name="A" /> Yes &nbsp; &nbsp;
+            <input type="radio" name="A" /> No</label
+          >
+          <br /><br />
+
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something here..."
+            style="height: 200px"
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+
+    <!-- 3.Footer -->
+    <div class="blue">
+      <style>
+        .blue li {
+          color: #05d17c;
+        }
+        .blue h5 {
+          color: #ecf3f0;
+        }
+
+        .blue li a {
+          color: grey;
+        }
+      </style>
+
+      <footer class="bd-footer py-5 mt-5 bg-dark">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-lg-3 mb-3">
+              <a
+                class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none"
+                href="/"
+                aria-label="Bootstrap"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Blue_computer_icon.svg/2048px-Blue_computer_icon.svg.png"
+                  height="40px"
+                  width="52px"
+                />
+                <title>iCoder</title>
+
+                <span class="fs-5" style="color: aqua">iCoder</span>
+              </a>
+              <ul class="list-unstyled small text-muted">
+                <li class="mb-2">
+                  Designed and built with all the love in the world by the
+                  <a href="/docs/5.0/about/team/">iCoder team</a> with the help of
+                  <a href="https://github.com/twbs/bootstrap/graphs/contributors"
+                    >our contributors</a
+                  >.
+                </li>
+                <li class="mb-2">
+                  Code licensed
+                  <a
+                    href="https://github.com/twbs/bootstrap/blob/main/LICENSE"
+                    target="_blank"
+                    rel="license noopener"
+                    >MIT</a
+                  >, docs
+                  <a
+                    href="https://creativecommons.org/licenses/by/3.0/"
+                    target="_blank"
+                    rel="license noopener"
+                    >CC BY 3.0</a
+                  >.
+                </li>
+                <li class="mb-2">Currently v5.0.2.</li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+              <h5>Links</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="/">Home</a></li>
+                <li class="mb-2"><a href="/docs/5.0/">Docs</a></li>
+                <li class="mb-2"><a href="/docs/5.0/examples/">Examples</a></li>
+                <li class="mb-2"><a href="https://opencollective.com/bootstrap">Themes</a></li>
+                <li class="mb-2"><a href="https://blog.getbootstrap.com/">Blog</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+              <h5>Guides</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="/docs/5.0/getting-started/">Getting started</a></li>
+                <li class="mb-2">
+                  <a href="/docs/5.0/examples/starter-template/">Starter template</a>
+                </li>
+                <li class="mb-2"><a href="/docs/5.0/getting-started/webpack/">Webpack</a></li>
+                <li class="mb-2"><a href="/docs/5.0/getting-started/parcel/">Parcel</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+              <h5>Projects</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="https://github.com/twbs/bootstrap">Bootstrap 5</a></li>
+                <li class="mb-2">
+                  <a href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a>
+                </li>
+                <li class="mb-2"><a href="https://github.com/twbs/icons">Icons</a></li>
+                <li class="mb-2"><a href="https://github.com/twbs/rfs">RFS</a></li>
+                <li class="mb-2">
+                  <a href="https://github.com/twbs/bootstrap-npm-starter">npm starter</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+              <h5>Community</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
+                <li class="mb-2">
+                  <a href="https://github.com/twbs/bootstrap/discussions">Discussions</a>
+                </li>
+                <li class="mb-2">
+                  <a href="https://github.com/sponsors/twbs">Corporate sponsors</a>
+                </li>
+                <li class="mb-2">
+                  <a href="https://opencollective.com/bootstrap">Open Collective</a>
+                </li>
+                <li class="mb-2"><a href="https://bootstrap-slack.herokuapp.com/">Slack</a></li>
+                <li class="mb-2">
+                  <a href="https://stackoverflow.com/questions/tagged/bootstrap-5"
+                    >Stack Overflow</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
